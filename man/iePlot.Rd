@@ -7,12 +7,7 @@
 iePlot(ieObject, tree, branchWidth, branchCutoff, labelSize, scaling)
 }
 \arguments{
-\item{ieObject}{object created by "ieObject"}
-\item{tree}{object of class"phylo"}
-\item{branchWidth}{scaling factor for visualizing branch widths}
-\item{branchCutoff}{number of standard deviations away from the mean rate. Used to indicate which branches should be colored.}
-\item{labelSize}{size of ancestral node label}
-\item{scaling}{scaling factor for visualizing node labels}
+\item{ieObject}{object comprising the output of an ie analysis}
 }
 \value{
 phylogenetic tree with mapped change and ancestral states
@@ -20,5 +15,4 @@ phylogenetic tree with mapped change and ancestral states
 \description{
 This function maps the results of an ie analysis onto a tree
 }
-\author{Jeroen Smaers}
 

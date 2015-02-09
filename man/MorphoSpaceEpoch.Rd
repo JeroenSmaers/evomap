@@ -7,8 +7,7 @@
 MorphoSpaceEpoch(X, Mya)
 }
 \arguments{
-\item{X}{an object created by "ieObject"}
-\item{Mya}{Units of time for which the morphospace is to be calculated}
+\item{X}{ieObject}
 }
 \value{
 dataframe with rates for all branches and ancestral states for all nodes in the tree up to the indicated epoch
@@ -16,5 +15,4 @@ dataframe with rates for all branches and ancestral states for all nodes in the 
 \description{
 This function calculates ancestral values at a particular snapshot in evolutionare time
 }
-\author{Jeroen Smaers}
 

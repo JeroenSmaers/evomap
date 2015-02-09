@@ -8,13 +8,14 @@ ie(data, tree)
 }
 \arguments{
 \item{data}{numeric vector with elements in the same order as tiplabels in the tree}
-\item{tree}{object of class "phylo"}
 }
 \value{
-dataframe with rates for all branches and ancestral states for all nodes in the tree
+dataframe with rescaled branch lengths (rBL) for all branches in the tree
 }
 \description{
-This function allows computing rates and ancestral states using the method of Independent Evolution
+This function allows computing rescaled branch lengths according to inferred phenotypic evolution and ancestral states using the method of Independent Evolution as described in Smaers & Vinicius (2009)
 }
-\author{Jeroen Smaers}
+\details{
+This function poses the following restrictions on the input data: no polytomies in the tree, no duplicated values, no zero values, and no negative values in the data. The algorithm was designed to deal with linear data (unlogged).
+}
 

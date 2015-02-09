@@ -23,6 +23,12 @@ value_epoch_all<-rbind(value_epoch_all,value_epoch)
 
                                 }
 MorphoSpace_epoch<-cbind(MorphoSpace_epoch,value_epoch_all)
-            return(MorphoSpace_epoch)
+            X_temp<-X
+            X_temp$value_desc[which(rownames(X_temp)%in%rownames(MorphoSpace_epoch))]<-value_epoch_all
+      
+      #Take only those branches that are <=Mya
+            if(length(which(X_temp$time_node_anc<=Mya))>1){X_temp<-X_temp[-which(X_temp$time_node_anc<=Mya),]}
+            return(X_temp)
 
                                 }
+

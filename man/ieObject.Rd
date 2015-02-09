@@ -4,12 +4,10 @@
 \alias{ieObject}
 \title{Function to sort data according to ie output (following the ape tree structure)}
 \usage{
-ieObject(tree,extants,nodes)
+ieObject(tree, data_extants, data_nodes)
 }
 \arguments{
-\item{tree}{object of class "phylo"}
-\item{extants}{named vector of extant values}
-\item{nodes}{named vector of ancestral states}
+\item{data_nodes}{named vector of ancestral states}
 }
 \value{
 object with extant and nodal values sorted according to the ape tree structure
@@ -17,5 +15,4 @@ object with extant and nodal values sorted according to the ape tree structure
 \description{
 This function sorts extant and nodal values according the ape tree structure
 }
-\author{Jeroen Smaers}
 

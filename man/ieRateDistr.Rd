@@ -2,14 +2,12 @@
 % Please edit documentation in R/ieRateDistr.r
 \name{ieRateDistr}
 \alias{ieRateDistr}
-\title{Morphospace for a particular snapshot in evolutionaty time}
+\title{Function to allocate the rate distribution between 2 variables to rate quadrants}
 \usage{
 ieRateDistr(Y, X, neutral)
 }
 \arguments{
-\item{Y}{object created by "ieObject" for the Y variable}
-\item{X}{object created by "ieObject" for the X variable}
-\item{neutral}{number indicating the cut off to assign color to major axis residuals}
+\item{ieObject}{object comprising the output of an ie analysis}
 }
 \value{
 list of ratedistribution elements and branches for each quadrant
@@ -17,5 +15,4 @@ list of ratedistribution elements and branches for each quadrant
 \description{
 This function allocates the rate distribution between 2 variables to rate quadrants
 }
-\author{Jeroen Smaers}
 
