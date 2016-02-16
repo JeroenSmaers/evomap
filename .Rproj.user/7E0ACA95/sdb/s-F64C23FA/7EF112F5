@@ -1,0 +1,16 @@
+{
+    "contents" : "#' Function to allocate the rate distribution between 2 variables to rate quadrants\n#'\n#' This function allocates the rate distribution between 2 variables to rate quadrants\n#' @param ieObject object comprising the output of an ie analysis\n#' @return list of ratedistribution elements and branches for each quadrant\n#' @export\n\nieRateDistr<-function(Y,X,neutral){\n            #relative rate\n                    YvX<-Y[1:3]\n                    D<-Y$rate-X$rate\n                    YvX<-cbind(YvX,Y$rate)\n                    YvX<-cbind(YvX,X$rate)\n                    YvX<-cbind(YvX,D)\n                    MA<-sqrt((D^2)-((sqrt(2*(D^2))/2)^2))\n                    MAresidual<-MA\n                    YvX<-cbind(YvX,MAresidual)\n                          negatives<-which(YvX$D<0)\n                          for(i in negatives){\n                          YvX$MAresidual[i]<-YvX$MAresidual[i]*(-1)}\n                    colnames(YvX)<-c(\"node_anc\",\"node_desc\",\"BL\",\"Y_rate\",\"X_rate\",\"D\",\"MAresidual\")\n\n            #neutral\n                  neutral_max<-neutral\n                  neutral_min<-(-neutral)\n            #accellerated increase\n                  AI<-which(YvX$MAresidual>neutral_max & Y$rate>0 & X$rate>0 & Y$rate>neutral)\n            #decellerated increase\n                  DI<-which(YvX$MAresidual<neutral_min & Y$rate>0 & X$rate>0 & X$rate>neutral)\n            #decellerated decrease\n                  DD<-which(YvX$MAresidual>neutral_max & Y$rate<0 & X$rate<0 & X$rate<(-neutral))\n            #accellerated decrease\n                  AD<-which(YvX$MAresidual<neutral_min & Y$rate<0 & X$rate<0 & Y$rate<(-neutral))\n            #separation\n                  S1<-c(which(YvX$MAresidual>neutral_max & Y$rate>0 & X$rate<0 & Y$rate>neutral),\n                        which(YvX$MAresidual>neutral_max & Y$rate>0 & X$rate<0 & Y$rate<=neutral & X$rate< (-(neutral))))\n                  S2<-c(which(YvX$MAresidual<neutral_min & Y$rate<0 & X$rate>0 & Y$rate<(-neutral)),\n                        which(YvX$MAresidual<neutral_min & Y$rate<0 & X$rate>0 & Y$rate>=(-neutral) & X$rate> neutral))\n            #all\n                  all<-c(S1,AI,DI,S2,AD,DD)\n\n      #Return\n            results<-list(YvX,S1,AI,DI,S2,AD,DD,all)\n            names(results)<-c(\"YvX\",\"S1\",\"AI\",\"DI\",\"S2\",\"AD\",\"DD\",\"All\")\n            return(results)\n\n}\n",
+    "created" : 1423075669695.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "428242377",
+    "id" : "7EF112F5",
+    "lastKnownWriteTime" : 1423007339,
+    "path" : "~/Google Drive/Research Projects/CURRENT_Smaers R Package/Evomap_Github/R/ieRateDistr.r",
+    "project_path" : "R/ieRateDistr.r",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
