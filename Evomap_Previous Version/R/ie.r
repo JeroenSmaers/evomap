@@ -3,7 +3,7 @@
 #' This function allows computing rescaled branch lengths according to inferred phenotypic evolution and ancestral states using the method of Independent Evolution as described in Smaers & Vinicius (2009)
 #' @param data numeric vector with elements in the same order as tiplabels in the tree
 #' @return dataframe with rescaled branch lengths (rBL) for all branches in the tree
-#' @details This function poses the following restrictions on the input data: no polytomies in the tree, no duplicated values, no zero values, and no negative values in the data. The algorithm was designed to deal with linear data (unlogged). This function is now deprecated; 'mvBM' should be used instead. 
+#' @details This function poses the following restrictions on the input data: no polytomies in the tree, no duplicated values, no zero values, and no negative values in the data. The algorithm was designed to deal with linear data (unlogged). 
 #' @export
 
 ie<-function(data,tree){

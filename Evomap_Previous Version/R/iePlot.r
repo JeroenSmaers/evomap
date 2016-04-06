@@ -14,7 +14,7 @@ iePlot<-function(ieObject,tree,branchWidth,branchCutoff,labelSize,scaling){
                   branch_col_ieObject<-rep("white",length(ieObject$change))
                   for(i in 1:length(branch_col_ieObject)){
                   if(ieObject$change[i]>cutoff)branch_col_ieObject[i]<-"green" else (if(ieObject$change[i]<=-cutoff)branch_col_ieObject[i]<-"red")}
-                        plot(tree,edge.col=branch_col_ieObject,edge.width=branch_widths_ieObject,label.offset=0.01,cex=0.9,tip.col="white")
+                        plot(tree,edge.col=branch_col_ieObject,edge.width=branch_widths_ieObject,label.offset=3,cex=0.9,tip.col="white")
                                     axisPhylo(cex=2,col="white",col.axis="white")
                                           mtext("Mya",side=1,adj=-0.05,col="white")
             #Add labels
