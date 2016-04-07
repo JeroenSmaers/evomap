@@ -1,14 +1,3 @@
-#' Evolutionary morphospace
-#'
-#' This function computes a sequence of evolutionary snapshots of a bivariate morphospace
-#' @param tree an object of class "phylo".
-#' @param X ieObject of variable 1
-#' @param X ieObject of variable 2
-#' @param sequence a vector indicating the evolutionary snapshots to be considered
-#' @param colors a vector indicating the colors of the data points along different evolutionary branches
-#' @return dataframe with rates for all branches and ancestral states for all nodes in the tree up to the indicated epoch
-#' @export
-
 EvoMorphoSpace<-function(tree,X,Y,sequence,colors){
             #Plot the EvoSpace
                   for(i in sequence){

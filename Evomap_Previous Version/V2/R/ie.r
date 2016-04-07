@@ -2,7 +2,6 @@
 #'
 #' This function allows computing rescaled branch lengths according to inferred phenotypic evolution and ancestral states using the method of Independent Evolution as described in Smaers & Vinicius (2009)
 #' @param data numeric vector with elements in the same order as tiplabels in the tree
-#' @param tree an object of class "phylo".
 #' @return dataframe with rescaled branch lengths (rBL) for all branches in the tree
 #' @details This function poses the following restrictions on the input data: no polytomies in the tree, no duplicated values, no zero values, and no negative values in the data. The algorithm was designed to deal with linear data (unlogged). This function is now deprecated; 'mvBM' should be used instead. 
 #' @export
@@ -113,18 +112,18 @@ for(i in nodes_extinct_reverse) {
                                 }
 
       #'results' dataframe
-      Output<-c()
-      Output=cbind(Output,Output_node_anc)
-      Output=cbind(Output,Output_node_desc)
-      Output=cbind(Output,Output_branchlength)
-      Output=cbind(Output,Output_rBLs)
-      colnames(Output)=c("node_anc","node_desc","BL","rBLs")
+      results<-c()
+      results=cbind(results,results_node_anc)
+      results=cbind(results,results_node_desc)
+      results=cbind(results,results_branchlength)
+      results=cbind(results,results_rBLs)
+      colnames(results)=c("node_anc","node_desc","BL","rBLs")
 
       #ancestors
-      Output<-Output[order(match(Output[,2],phy.matrix[,2])),]
-      rownames(Output)<-c(1:length(Output[,1]))
-      Output<-as.data.frame(Output)
+      results<-results[order(match(results[,2],phy.matrix[,2])),]
+      rownames(results)<-c(1:length(results[,1]))
+      results<-as.data.frame(results)
 
-      return(Output)
+      return(results)
 
 }

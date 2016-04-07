@@ -88,8 +88,8 @@ mvBM <- function(data,tree,sigma2){
 
                                 }
 #Results
-        Output<-data.frame(tree$edge,tree$edge.length,rBL[sort(names(rBL))])
-            names(Output)<-c("node_anc","node_desc","BL","rBL")
-        return(Output)
+        results<-data.frame(tree$edge,tree$edge.length,rBL[sort(names(rBL))])
+            names(results)<-c("node_anc","node_desc","BL","rBL")
+        return(results)
 
 }

@@ -1,11 +1,12 @@
 #' Function to calculate ancestral values at particular snapshots in evolutionary time
 #'
 #' This function calculates ancestral values at a particular snapshot in evolutionare time
-#' @param X AncObject
-#' @param Mya the timing of the evolutionary snapshots to be considered (considering a chronogram)
+#' @param X ieObject
 #' @return dataframe with rates for all branches and ancestral states for all nodes in the tree up to the indicated epoch
 #' @export
 MorphoSpaceEpoch<-function(X,Mya){
+
+#Mya<-90
 
 #Which branches fall onto the Mya line?
 value_epoch_all<-c()
