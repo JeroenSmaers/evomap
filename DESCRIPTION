@@ -1,7 +1,7 @@
 Package: evomap
-Title: Multiple variance Brownian motion estimation and pGLS model comparison using phylogenetic analysis of covariance
+Title: Evomap
 Version: 0.0.0.9000
-Authors@R: "Jeroen Smaers"
+Author: Jeroen Smaers
 Description: What the package does (one paragraph)
 Depends:
     R (>= 3.1.1)
