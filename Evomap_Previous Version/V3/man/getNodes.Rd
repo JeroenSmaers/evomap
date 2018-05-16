@@ -2,7 +2,7 @@
 % Please edit documentation in R/getNodes.r
 \name{getNodes}
 \alias{getNodes}
-\title{List all nodes descendant from a node}
+\title{List all nodes ancestral to another node}
 \usage{
 getNodes(tree, node)
 }
@@ -15,5 +15,6 @@ getNodes(tree, node)
 vector of node numbers.
 }
 \description{
-List all nodes descendant from a node
+List all nodes ancestral to another node
 }
+

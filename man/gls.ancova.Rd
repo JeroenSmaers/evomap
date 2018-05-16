@@ -2,31 +2,25 @@
 % Please edit documentation in R/gls.ancova.r
 \name{gls.ancova}
 \alias{gls.ancova}
-\title{GLS model comparison}
+\title{pGLS model comparison using phylogenetic analysis of covariance}
 \usage{
-gls.ancova(Y, X, Sigma, ReducedModel, FullModel)
+gls.ancova(form, Sigma, ReducedModel, FullModel)
 }
 \arguments{
-\item{Y}{Dependent variable.}
+\item{form}{Model formula.}
 
-\item{X}{Independent variable.}
-
-\item{Sigma}{Matrix describing the covariance among data poitns. For the phylogenetic regression, this is based on a phylogeny (vcv(tree)).}
+\item{Sigma}{Matrix describing the covariance among data points. For the phylogenetic regression, this is based on a phylogeny (vcv(tree)).}
 
 \item{ReducedModel}{The GLS model that includes the fewest indicator variables.}
 
-\item{FullModel}{The GLS model that includes the fewest indicator variables.}
+\item{FullModel}{The GLS model that includes the most indicator variables.}
 }
 \value{
 Anova table.
 }
 \description{
-Computes F-ratio test of GLS models that include different sets of indicator variables. See supplementary information Smaers & Rohlf (2016) for more information.
-}
-\examples{
-See supplementary information Smaers & Rohlf (2016).
+Computes F-ratio test of GLS models that include different sets of indicator variables.
 }
 \references{
-Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. In Press.
+Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
 }
-

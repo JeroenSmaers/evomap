@@ -21,11 +21,12 @@ Confidence intervals of the estimates ('CI').
 Confidence intervals of unobserved values of Y ('CI.plot').
 }
 \description{
-Computes confidence intervals for a GLS regression. When the variance covariance matrix is based on a phylogeny, this computes the confidence intervals for a phylogenetic regression (pGLS).
+Computes confidence intervals for a GLS regression. When the variance covariance matrix is based on a phylogeny, this computes the confidence intervals for a phylogenetic regression (PGLS).
 }
 \examples{
 See supplementary information Smaers & Rohlf (2016).
 }
 \references{
-Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
+Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. In Press.
 }
+

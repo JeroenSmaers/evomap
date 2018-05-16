@@ -1,4 +1,4 @@
-#' List all tips descendant from a node
+#' List all tips ancestral to a node
 #'
 #' @param tree an object of class 'phylo'.
 #' @param node number of interest.
