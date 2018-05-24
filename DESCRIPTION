@@ -1,10 +1,11 @@
 Package: evomap
-Title: What the Package Does (one line, title case)
+Title: Evomap
 Version: 0.0.0.9000
-Authors@R: "First Last <first.last@example.com> [aut, cre]"
+Author: Jeroen Smaers
 Description: What the package does (one paragraph)
 Depends:
     R (>= 3.1.1)
 License: What license is it under?
 LazyData: true
+Imports: phytools
 RoxygenNote: 5.0.1
