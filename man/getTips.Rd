@@ -2,7 +2,7 @@
 % Please edit documentation in R/getTips.r
 \name{getTips}
 \alias{getTips}
-\title{List all tips ancestral to a node}
+\title{List all tips descendant from a node}
 \usage{
 getTips(tree, node)
 }
@@ -15,6 +15,5 @@ getTips(tree, node)
 vector of tip numbers.
 }
 \description{
-List all tips ancestral to a node
+List all tips descendant from a node
 }
-

@@ -26,9 +26,8 @@ Prediction intervals of unobserved values of Y ('PI.plot').
 Computes prediction intervals for a GLS regression. When the variance covariance matrix is based on a phylogeny, this computes the prediction intervals for a phylogenetic regression (PGLS).
 }
 \examples{
-See supplementary information Smaers & Rohlf (2016).
+see smaerslab.com/pGLSintervals/ 
 }
 \references{
-Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. In Press.
+Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
 }
-

@@ -1,4 +1,4 @@
-#' List all edges ancestral to a node
+#' List all edges descendant from a node
 #'
 #' @param tree an object of class 'phylo'.
 #' @param node number of interest.

@@ -8,8 +8,8 @@
 #' @return GLS results.
 #' @return Prediction intervals of the estimates ('PI').
 #' @return Prediction intervals of unobserved values of Y ('PI.plot').
-#' @references Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. In Press.
-#' @examples See supplementary information Smaers & Rohlf (2016).
+#' @references Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
+#' @examples see smaerslab.com/pGLSintervals/ 
 #' @export
 
 gls.pi<-function(Y,X,Sigma,k){
@@ -23,7 +23,7 @@ gls.pi<-function(Y,X,Sigma,k){
       X1<-rep(1,n)
       q<-2          # correct if multivariate!!
       C1<-solve(t(X1)%*%invSigma%*%X1)
-      Y_PGLSmean<-C1%*%t(X1)%*%invSigma%*%Y
+      Y_PGLSmean<-c(C1%*%t(X1)%*%invSigma%*%Y)
       Y_PGLSdeviations = Y - Y_PGLSmean
       Y_PGLSvariance = (t(Y_PGLSdeviations)%*%invSigma%*%Y_PGLSdeviations)/(n-1)
       SE_Y_mean = sqrt(Y_PGLSvariance/n)
@@ -34,7 +34,7 @@ gls.pi<-function(Y,X,Sigma,k){
       B<-w%*%Y
       Yhat<-XX%*%B
       Yresid=Y-Yhat
-      Y_MSEresid<-(t(Yresid)%*%invSigma%*%Yresid)/(n-q)
+      Y_MSEresid<-c((t(Yresid)%*%invSigma%*%Yresid)/(n-q))
       a<-B[1]
       b<-B[2]
 #SE of statistics
@@ -47,7 +47,7 @@ gls.pi<-function(Y,X,Sigma,k){
       colnames(model)<-c("Estimate","Std.Error")
       rownames(model)<-c("intercept","slope")
 #predint
-      SEYhat<-sqrt((diag(XX%*%C%*%t(XX))+as.matrix(1/k))%*%Y_MSEresid)
+      SEYhat<-sqrt((diag(XX%*%C%*%t(XX))+c(1/k))%*%((t(Yresid)%*%invSigma%*%Yresid)/(n-q)))
       PI<-cbind(X,Yhat,SEYhat)
             Lower2.5<-Yhat-qt(0.975,n)*SEYhat
             Lower5<-Yhat-qt(0.95,n)*SEYhat
@@ -64,7 +64,7 @@ gls.pi<-function(Y,X,Sigma,k){
       Xi<-seq(c(min(X)-abs(max(X))),to=c(abs(max(X))*5),length.out=100)
       Z<-c(Xi)
       ZZ<-cbind(rep(1,length(Z)),Z)
-      SEYhat.Xi<-sqrt((diag(ZZ%*%C%*%t(ZZ))+as.matrix(1/k))%*%Y_MSEresid)
+      SEYhat.Xi<-sqrt((diag(ZZ%*%C%*%t(ZZ))+c(1/k))%*%((t(Yresid)%*%invSigma%*%Yresid)/(n-q)))
       Yhat.Xi<-a+b*Xi
             Lower2.5.Yhat.Xi<-Yhat.Xi-qt(0.975,n)*SEYhat.Xi
             Lower5.Yhat.Xi<-Yhat.Xi-qt(0.95,n)*SEYhat.Xi
@@ -73,7 +73,7 @@ gls.pi<-function(Y,X,Sigma,k){
       PI.plot<-cbind(Xi,Yhat.Xi,SEYhat.Xi,Lower2.5.Yhat.Xi,Lower5.Yhat.Xi,Upper5.Yhat.Xi,Upper2.5.Yhat.Xi)
       colnames(PI.plot)<-c("X","Yhat","SEYhat","Lower2.5","Lower5","Upper5","Upper2.5")
       PI.plot<-as.data.frame(PI.plot)
-Output<-list(model,PI,PI.plot)
-names(Output)<-c("model","PI","PI.plot")
-return(Output)
+results<-list(model,PI,PI.plot)
+names(results)<-c("model","PI","PI.plot")
+return(results)
 }

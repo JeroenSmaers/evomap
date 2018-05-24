@@ -2,7 +2,7 @@
 % Please edit documentation in R/getEdges.r
 \name{getEdges}
 \alias{getEdges}
-\title{List all edges ancestral to a node}
+\title{List all edges descendant from a node}
 \usage{
 getEdges(tree, node)
 }
@@ -15,6 +15,5 @@ getEdges(tree, node)
 vector of edge numbers.
 }
 \description{
-List all edges ancestral to a node
+List all edges descendant from a node
 }
-
