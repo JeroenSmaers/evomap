@@ -21,7 +21,7 @@
 #'
 #' @format A tree  146 primate species
 #'   ...
-#' }
+#' 
 #' @source Arnold C, Matthews LJ, Nunn CL. 2010. The 10k Trees Website: A New Online Resource for Primate Phylogeny. Evolutionary Anthropology 19: 114-118.
 "primateTree"
 
