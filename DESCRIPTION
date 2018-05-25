@@ -1,7 +1,7 @@
 Package: evomap
 Title: Evomap
 Version: 0.0.0.9000
-Author: Jeroen Smaers
+Author: Jeroen Smaers, Carrie Mongle
 Description: Evolutionary mapping of continuous traits
 Depends:
     R (>= 3.1.1)

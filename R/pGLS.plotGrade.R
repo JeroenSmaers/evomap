@@ -7,7 +7,7 @@
 #' @param tree an object of class "phylo".
 #' @param group vector listing the tip labels for which the pGLS model should be plotted
 #' @return pGLS abline and points of the group of interest
-#' @examples see smaerslab.com/gls.ancova/ 
+#' @examples see https://smaerslab.com/software/ 
 
 #' @export
 pGLS.plotGrade<-function(Yvar,Xvar,data,tree,group,...){

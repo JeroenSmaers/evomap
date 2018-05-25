@@ -9,7 +9,7 @@
 #' @return Prediction intervals of the estimates ('PI').
 #' @return Prediction intervals of unobserved values of Y ('PI.plot').
 #' @references Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
-#' @examples see smaerslab.com/pGLSintervals/ 
+#' @examples see https://smaerslab.com/software/
 #' @export
 
 gls.pi<-function(Y,X,Sigma,k){

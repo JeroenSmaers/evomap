@@ -24,7 +24,7 @@ Confidence intervals of unobserved values of Y ('CI.plot').
 Computes confidence intervals for a GLS regression. When the variance covariance matrix is based on a phylogeny, this computes the confidence intervals for a phylogenetic regression (PGLS).
 }
 \examples{
-see smaerslab.com/pGLSintervals/ 
+see https://smaerslab.com/software/ 
 }
 \references{
 Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.

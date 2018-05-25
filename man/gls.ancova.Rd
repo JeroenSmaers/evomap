@@ -22,7 +22,7 @@ Anova table.
 Computes F-ratio test of GLS models that include different sets of indicator variables.
 }
 \examples{
-see smaerslab.com/gls.ancova/ 
+see https://smaerslab.com/software/ 
 }
 \references{
 Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.

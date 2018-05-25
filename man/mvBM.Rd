@@ -30,7 +30,7 @@ plot(tree_mvBM) # plot mvBM tree
 ace(x,tree_mvBM,method="REML") # get ancestral estimates using mvBM tree 
 # To obtain the mvBM branch specific rate estimate: calculate sig2 for the trait in question using the mvBM tree; multiply the mvBM sig2 with the mvBM rescaled branch length of the lineage of interest; divide this value by the phylogenetic branch length of the lineage of interest. 
 # MCMC posterior distributions can be obtained by using anc.Bayes for the above calculations. ('anc.Bayes' requires the 'phytools' package)
-for other examples see smaerslab.com/mvBM/ 
+for other examples see https://smaerslab.com/software/
 }
 \references{
 Smaers, Mongle & Kandler (2016) A multiple variance Brownian motion framework for estimating variable rates and inferring ancestral states. Biological Journal of the Linnean Society. 118 (1): 78-94.

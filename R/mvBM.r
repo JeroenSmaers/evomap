@@ -16,7 +16,7 @@
 #' ace(x,tree_mvBM,method="REML") # get ancestral estimates using mvBM tree 
 #' # To obtain the mvBM branch specific rate estimate: calculate sig2 for the trait in question using the mvBM tree; multiply the mvBM sig2 with the mvBM rescaled branch length of the lineage of interest; divide this value by the phylogenetic branch length of the lineage of interest. 
 #' # MCMC posterior distributions can be obtained by using anc.Bayes for the above calculations. ('anc.Bayes' requires the 'phytools' package)
-#' @examples for other examples see smaerslab.com/mvBM/ 
+#' @examples for other examples see https://smaerslab.com/software/
 
 #' @export
 mvBM <- function (data, tree, sigma2) 

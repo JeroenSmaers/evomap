@@ -8,7 +8,7 @@
 #' @return Confidence intervals of the estimates ('CI').
 #' @return Confidence intervals of unobserved values of Y ('CI.plot').
 #' @references Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
-#' @examples see smaerslab.com/pGLSintervals/ 
+#' @examples see https://smaerslab.com/software/ 
 #' @export
 gls.ci<-function(Y,X,Sigma){
       n<-length(X)

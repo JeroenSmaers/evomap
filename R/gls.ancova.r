@@ -7,7 +7,7 @@
 #' @param FullModel The GLS model that includes the fewest indicator variables. 
 #' @return Anova table.
 #' @references Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
-#' @examples see smaerslab.com/gls.ancova/ 
+#' @examples see https://smaerslab.com/software/ 
 #' @export
 
 gls.ancova<-function (form, Sigma, ReducedModel, FullModel) 

@@ -22,7 +22,7 @@ probability density distribution of mvBM rate
 Plots lineage-specific rates using mvBM
 }
 \examples{
-see smaerslab.com/mvBM/ 
+see https://smaerslab.com/software/ 
 }
 \references{
 Smaers, Mongle & Kandler (2016) A multiple variance Brownian motion framework for estimating variable rates and inferring ancestral states. Biological Journal of the Linnean Society. 118 (1): 78-94.

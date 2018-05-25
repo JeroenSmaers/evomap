@@ -24,5 +24,5 @@ pGLS abline and points of the group of interest
 Plots the pGLS model of a particular subset of a comparative dataset
 }
 \examples{
-see smaerslab.com/gls.ancova/ 
+see https://smaerslab.com/software/ 
 }
