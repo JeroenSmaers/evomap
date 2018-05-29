@@ -4,7 +4,7 @@
 \alias{pGLS.plotGrade}
 \title{pGLS plot of a particular grade}
 \usage{
-pGLS.plotGrade(Yvar, Xvar, data, tree, group, ...)
+pGLS.plotGrade(Yvar, Xvar, data, tree, model, group, ...)
 }
 \arguments{
 \item{Yvar}{column name of the dependent variable}
@@ -15,6 +15,8 @@ pGLS.plotGrade(Yvar, Xvar, data, tree, group, ...)
 
 \item{tree}{an object of class "phylo".}
 
+\item{model}{of evolution to be used in pGLS ("BM" or "lambda").}
+
 \item{group}{vector listing the tip labels for which the pGLS model should be plotted}
 }
 \value{
@@ -24,5 +26,5 @@ pGLS abline and points of the group of interest
 Plots the pGLS model of a particular subset of a comparative dataset
 }
 \examples{
-see https://smaerslab.com/software/ 
+see smaerslab.com/software
 }
