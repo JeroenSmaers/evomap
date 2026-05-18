@@ -17,6 +17,6 @@ LazyData: true
 Imports:
     phytools,
     ape,
-    nlme
+    phylolm
 RoxygenNote: 7.3.2
 Encoding: UTF-8

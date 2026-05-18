@@ -15,7 +15,7 @@ pGLS.plotGrade(Yvar, Xvar, data, tree, model, group, ...)
 
 \item{tree}{an object of class "phylo".}
 
-\item{model}{of evolution to be used in pGLS ("BM" or "lambda").}
+\item{model}{model of evolution to be used in phylolm ("BM" or "lambda").}
 
 \item{group}{vector listing the tip labels for which the pGLS model should be plotted}
 }
