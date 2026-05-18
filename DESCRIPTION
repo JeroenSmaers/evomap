@@ -3,7 +3,7 @@ Title: Evolutionary Mapping of Continuous Traits
 Version: 0.1.0
 Authors@R: c(
     person("Jeroen", "Smaers", email = "j.smaers@gmail.com", role = c("aut", "cre")),
-    person("Carrie", "Mongle", role = "aut"))
+    person("Carrie", "Mongle", role = "ctb"))
 Description: Tools for evolutionary mapping of continuous traits on phylogenies,
     including multiple variance Brownian motion (mvBM) estimation, phylogenetic
     generalized least squares (pGLS) regression with confidence and prediction

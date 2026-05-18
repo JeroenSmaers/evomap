@@ -63,6 +63,10 @@ If you use the mvBM framework, please cite:
 
 > Smaers, Mongle & Kandler (2016) A multiple variance Brownian motion framework for estimating variable rates and inferring ancestral states. *Biological Journal of the Linnean Society* 118(1): 78–94.
 
+## Maintainer
+
+[Jeroen B. Smaers](https://smaerslab.com) — contributions by Carrie Mongle (2014–2018)
+
 ## License
 
 MIT
