@@ -1,11 +1,22 @@
 Package: evomap
-Title: Evomap
-Version: 0.0.0.9000
-Author: Jeroen Smaers, Carrie Mongle
-Description: Evolutionary mapping of continuous traits
+Title: Evolutionary Mapping of Continuous Traits
+Version: 0.1.0
+Authors@R: c(
+    person("Jeroen", "Smaers", email = "j.smaers@gmail.com", role = c("aut", "cre")),
+    person("Carrie", "Mongle", role = "aut"))
+Description: Tools for evolutionary mapping of continuous traits on phylogenies,
+    including multiple variance Brownian motion (mvBM) estimation, phylogenetic
+    generalized least squares (pGLS) regression with confidence and prediction
+    intervals, and utilities for traversing and pruning phylogenetic trees.
+URL: https://smaerslab.com/software/
+BugReports: https://github.com/JeroenSmaers/evomap/issues
 Depends:
-    R (>= 3.1.1)
-License: MIT
+    R (>= 3.5.0)
+License: MIT + file LICENSE
 LazyData: true
-Imports: phytools
-RoxygenNote: 6.0.1
+Imports:
+    phytools,
+    ape,
+    nlme
+RoxygenNote: 7.3.2
+Encoding: UTF-8
