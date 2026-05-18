@@ -1,16 +1,17 @@
 #' pGLS model comparison using phylogenetic analysis of covariance (gls.ancova)
 #'
 #' Computes F-ratio test of GLS models that include different sets of indicator variables.
-#' @param form Model formula. 
-#' @param Sigma Matrix describing the covariance among data points. For the phylogenetic regression, this is based on a phylogeny (vcv(tree)). 
-#' @param ReducedModel The GLS model that includes the fewest indicator variables. 
-#' @param FullModel The GLS model that includes the fewest indicator variables. 
+#' @param form Model formula.
+#' @param data a data frame containing the variables in the model.
+#' @param Sigma Matrix describing the covariance among data points. For the phylogenetic regression, this is based on a phylogeny (vcv(tree)).
+#' @param ReducedModel The GLS model that includes the fewest indicator variables.
+#' @param FullModel The GLS model that includes the fewest indicator variables.
 #' @return Anova table.
 #' @references Smaers & Rohlf (2016) Testing species' deviations from allometric preductions using the phylogenetic regression. Evolution. 70 (5): 1145-1149.
 #' @examples see https://smaerslab.com/software/ 
 #' @export
 
-gls.ancova<-function (form, Sigma, ReducedModel, FullModel) 
+gls.ancova<-function (form, data, Sigma, ReducedModel, FullModel) 
 {
     Y<-c(data[,which(colnames(data)==all.vars(form)[1])])
     n <- length(Y); tr <- sum(diag(Sigma)); Sigma <- n * Sigma/tr; invSigma <- solve(Sigma)

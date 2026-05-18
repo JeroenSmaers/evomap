@@ -4,10 +4,12 @@
 \alias{gls.ancova}
 \title{pGLS model comparison using phylogenetic analysis of covariance (gls.ancova)}
 \usage{
-gls.ancova(form, Sigma, ReducedModel, FullModel)
+gls.ancova(form, data, Sigma, ReducedModel, FullModel)
 }
 \arguments{
 \item{form}{Model formula.}
+
+\item{data}{a data frame containing the variables in the model.}
 
 \item{Sigma}{Matrix describing the covariance among data points. For the phylogenetic regression, this is based on a phylogeny (vcv(tree)).}
 
